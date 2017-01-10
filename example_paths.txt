@@ -1,1 +1,3 @@
-/Image_test.JPG
+Write Paths Like (do not include quotations):
+
+/path/to/image/img1.jpg
