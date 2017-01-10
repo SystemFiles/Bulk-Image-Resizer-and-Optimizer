@@ -679,6 +679,7 @@
 from PIL import Image
 from io import FileIO
 import os
+import sys
 
 path_list = []
 file_list = []
@@ -716,8 +717,12 @@ def populate_file_list(path_list):
     '''
     
     for path in path_list:
-        im = Image.open(path)
-        file_list.append(im)
+        try:
+            im = Image.open(path)
+            file_list.append(im)
+        except IOError:
+            print("Error with image path.. Image DNE or is not in that path[!] Try again...")
+            sys.exit(0)
         
 
 def ensure_dir(d):
@@ -741,7 +746,7 @@ if __name__ == '__main__':
             temp_file = file(path_file, 'r')
         except IOError:
             print("Error finding File: Either DNE or input was invalid..")
-
+            sys.exit(0)
         # Read file
         for line in temp_file:
             if  line[-1] != '\n':
