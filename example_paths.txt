@@ -1,4 +1,1 @@
-/Users/bensykes/Documents/My Pictures/Personal/CSC148/Practice Stuff/Image Optimizer/header_img2.JPG
-/Users/bensykes/Documents/My Pictures/Personal/CSC148/Practice Stuff/Image Optimizer/header_img3.JPG
-/Users/bensykes/Documents/My Pictures/Personal/CSC148/Practice Stuff/Image Optimizer/header_img4.JPG
-/Users/bensykes/Documents/My Pictures/Personal/CSC148/Practice Stuff/Image Optimizer/header_img5.png
+/Image_test.JPG

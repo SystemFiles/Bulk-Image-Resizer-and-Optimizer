@@ -700,10 +700,9 @@ def optimize(im_file_list, num_images, width, height, extention_fmt):
             im_resized = im_file_list[i].resize(size, Image.BILINEAR)
             
             # Check if directory exists...if not create it.
-            os.chmod('/Optimized-Images/', 0777) # Force permission to create dir.
-            ensure_dir('/Optimized-Images/')
+            #ensure_dir('/Optimized-Images') <- Not yet implemented!
             
-            im_resized.save('/Optimized-Images/' + path_list[i][:-4]+'-optimized.' + extention_fmt, dpi=(72,72))
+            im_resized.save(path_list[i][:-4]+'-optimized.' + extention_fmt, dpi=(72,72))
         except IOError:
             return False # Image save not successful.
 
@@ -722,7 +721,9 @@ def populate_file_list(path_list):
         
 
 def ensure_dir(d):
+    '''(str) -> NoneType'''
     if not os.path.exists(d):
+        os.chmod(d, 0777) # Force permission to create dir.
         os.makedirs(d)
 
 if __name__ == '__main__':
